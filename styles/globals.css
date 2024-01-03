@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+    .btn{
+        @apply bg-lime-600 font-heading text-lg text-center uppercase w-full text-white font-medium tracking-widest px-4 py-2 rounded-sm hover:bg-lime-800 transition-colors block cursor-pointer;
+    }
+
+    .textarea-control {
+        @apply resize-none border border-slate-700 my-2 block w-full px-4 py-2 rounded-sm outline-none
+    }
+}
