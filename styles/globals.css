@@ -4,10 +4,47 @@
 
 @layer components{
     .btn{
-        @apply bg-lime-600 font-heading text-lg text-center uppercase w-full text-white font-medium tracking-widest px-4 py-2 rounded-sm hover:bg-lime-800 transition-colors block cursor-pointer;
+        @apply disabled:cursor-not-allowed bg-lime-600 font-heading text-lg text-center uppercase w-full text-white font-medium tracking-widest px-4 py-2 rounded-sm hover:bg-lime-800 transition-colors block cursor-pointer;
     }
 
     .textarea-control {
-        @apply resize-none border border-slate-700 my-2 block w-full px-4 py-2 rounded-sm outline-none
+        @apply resize-none border focus:border-slate-500 focus:shadow-[inset_0_2px_4px_0px_rgba(0,0,0,0.1)] border-slate-200 block w-full px-4 py-2 mt-1 rounded-lg outline-none
     }
+
+    .content-container{
+        @apply mb-10 rounded-xl  border-slate-400 border shadow-md overflow-hidden
+    }
+
+    .section-title{
+        @apply text-white px-5 py-2 bg-gradient-to-l justify-between flex
+    }
+    .section-content{
+        @apply p-5 text-justify
+    }
+
+    .post-content h1,
+    .post-content h2,
+    .post-content h3,
+    .post-content h4,
+    .post-content h5 {
+        @apply font-heading mb-2 mt-5
+    }
+
+    .post-content h2{
+        @apply text-2xl 
+    }
+
+    .post-content h3{
+        @apply text-xl 
+    }
+
+    .post-content p{
+        @apply mb-3 tracking-wide
+    }
+
+    .post-content ul{
+        @apply list-disc
+    }
+
+
 }

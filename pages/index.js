@@ -6,7 +6,9 @@ import Image from "next/image";
 export default function Home() {
   return (
   <div className="w-screen h-screen overflow-hidden flex justify-center items-center">
-    <Image src={heroImage} alt="hero" fill className="absolute w-full h-full" />
+    <div className="animate-hero bg-gradient-to-tr from-indigo-400 to-transparent w-[110vw] h-[110vh] fixed z-10">
+      <Image src={heroImage} alt="hero" fill className="absolute animate-blur" />
+    </div>
     <div className="z-10 text-white px-10 py-5 bg-gradient-to-tr from-zinc-500/50 to-indigo-900/90 w-1/3 min-h-min text-center rounded-md backdrop-blur-sm">
     <Logo></Logo>
     <p className="pb-4">The AI-powered SAAS solution to generate SEO-optimized blog posts in minutes. Get high-quality content, without sacrificing your time.</p>
