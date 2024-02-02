@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useUser } from "@auth0/nextjs-auth0/client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleNotch, faCoins } from "@fortawesome/free-solid-svg-icons";
+import { faCoins } from "@fortawesome/free-solid-svg-icons";
 import { Logo } from "../Logo";
 import { PostList } from "../PostList";
 import { useContext, useEffect, useState } from "react";
@@ -25,7 +25,7 @@ export const AppLayout = ({children,...rest}) =>{
             if(!exist){
                 getPosts({getNewerPosts:true,lastPostDate:rest.createdDate})
             }
-        }
+        }//检测是否在文章详情页面，如果在就检测该文章的id是否已经在左侧懒加载的初始加载列表里，如果没有就继续从数据库调取从该文章创建日期开始的最新的全部文章
         setLoading(false);
     },[rest.posts, setPostsFromSSR,getPosts,rest.postID,rest.createdDate]);//一旦服务器传递的posts及setPostsFromSSR函数改变，就重新调用setPostsFromSSR(rest.posts)
 

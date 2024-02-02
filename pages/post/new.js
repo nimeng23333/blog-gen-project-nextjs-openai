@@ -27,7 +27,7 @@ export default function NewPost(props) {
         router.push(`/post/${data.postID}`)
       }
     }catch(e){
-      setLoading(true);
+      setLoading(false);
     }
   }
   return (
