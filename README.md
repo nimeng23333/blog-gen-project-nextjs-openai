@@ -1,1 +1,1 @@
-# Next JS & Open AI / GPT: Next-generation Next JS & AI apps
+# 基于 Next.js、React、TailwindCSS、OpenAI API 和 MongoDB 的博客文章生成 SaaS 网站开发
